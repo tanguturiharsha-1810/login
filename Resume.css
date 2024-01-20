@@ -1,0 +1,55 @@
+Img{
+    border-radius: 6000% ;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color:beige;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    float: left;
+    width: 300px;
+    margin-right: 10px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
