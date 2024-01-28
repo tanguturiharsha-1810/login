@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RegistrationPage</title>
     <link rel="stylesheet" type="text/css" href="Registrationpage.css">
-    <link rel="stylesheet" type="text/css" href="Registrationpage.css">
+    <script src="Registrationpage.js"></script>
+
+   
 </head>
 <body>
     <div class="wrapper">
         <form action="">
             <h1>Registration</h1>
-            <div class="input-box"><input type="text" placeholder="Username" required></div>
-            <div class="input-box"> <input type="password"  placeholder="password" required></div>
-            <div class="input-box"><input type="text"  placeholder="Email" required></div>
-            <div class="input-box"><input type="text"  placeholder="First Name" required></div>
-            <div class="input-box"><input type="text"  placeholder="Last  Name" required></div>
-            <div class="input-box"> <input type="tel"  placeholder="Phone Number" required></div>    
-            <div class="input-box"> <input type="text"  placeholder="Gender" required></div>  
-            <div class="input-box"> <input type="tel"  placeholder="Age" required></div>
-            <div class="input-box"><input type="text" placeholder="Profession"> </div>
-            <div class="input-box"><input type="text" placeholder="Hobbies"> </div>
+            <div class="input-box"><input type="text" placeholder="Username" id="Username" required></div>
+            <div class="input-box"> <input type="password"  placeholder="password" id="password" required></div>
+            <div class="input-box"> <input type="Password"  placeholder="confirmPassword" id="ConfirmPassword" required></div>
+            <div class="input-box"><input type="text"  placeholder="Email" id="email" required></div>
+            <div class="input-box"><input type="text"  placeholder="FirstName" id="Fname" required></div>
+            <div class="input-box"><input type="text"  placeholder="LastName" id="Lname" required></div>
+            <div class="input-box"> <input type="tel"  placeholder="PhoneNumber" id="phoneNumber" required></div> 
+            <div class="input-box"> <input type="tel"  placeholder="Age" id="age" required></div>
+            <div class="input-box"><input type="text" placeholder="Profession" id="proffesion" required> </div>
+            <div class="input-box"><input type="text" placeholder="Hobbies" id="hobbies" > </div>
+
             <div class="terms-conditions">
-                <label><input type="checkbox">Terms & conditions </label>
+                <label><input type="checkbox" id="terms">Terms & conditions </label>
                 <a herf="#">Terms&conditions</a>
             </div>
             <button type="submit" class="btn">Registration</button>
         </form>
     </div>
+    
 </body>
 </html>
