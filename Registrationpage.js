@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Hobbies should be an array with a minimum of 1 item and a maximum of 5 items, allowing only alphabets
         const minLength = 5;
         const maxLength = 30;
-        const alphabetRegex = /^[a-zA-Z]+$/;
+        const alphabetAndCommaRegex = /^[a-zA-Z,]+$/;
 
         if (hobbies.length < minLength || hobbies.length > maxLength || !alphabetAndCommaRegex.test(hobbies)) {
             alert('hobbies must be between 5 and 30 characters and contain only alphabets and commas.');
