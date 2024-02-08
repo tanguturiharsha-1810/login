@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Checker</title>
+</head>
+<body>
+
+    <h2>checking wheather a number is multiple of 3 or 7 or both</h2>
+
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput" oninput="checkNumber()">
+    
+    <div id="result"></div>
+
+    <script>
+        function checkNumber() {
+            var inputElement = document.getElementById('numberInput');
+            var resultElement = document.getElementById('result');
+
+            
+            var number = inputElement.value;
+
+            
+            var isMultipleOf3 = (number % 3 === 0);
+            var isMultipleOf7 = (number % 7 === 0);
+
+            
+            if (isMultipleOf3 && isMultipleOf7) {
+                resultElement.innerHTML = number + " is a multiple of both 3 and 7.";
+            } else if (isMultipleOf3) {
+                resultElement.innerHTML = number + " is a multiple of 3.";
+            } else if (isMultipleOf7) {
+                resultElement.innerHTML = number + " is a multiple of 7.";
+            } else {
+                resultElement.innerHTML = number + " is not a multiple of 3 or 7.";
+            }
+        }
+    </script>
+
+</body>
+</html>

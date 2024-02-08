@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Date Format</title>
+</head>
+<body>
+
+  <h2>Choose Date Format:</h2>
+  <form>
+    <label for="format">Select format:</label>
+    <select id="format">
+      <option value="mm-dd-yyyy">mm-dd-yyyy</option>
+      <option value="mm/dd/yyyy">mm/dd/yyyy</option>
+      <option value="dd-mm-yyyy">dd-mm-yyyy</option>
+      <option value="dd/mm/yyyy">dd/mm/yyyy</option>
+    </select>
+    <button type="button" onclick="displayCurrentDate()">Get Current Date</button>
+  </form>
+
+  <h2>Current Date:</h2>
+  <p id="currentDate"></p>
+
+  <script>
+    function displayCurrentDate() {
+      var selectedFormat = document.getElementById("format").value;
+      var currentDate = new Date();
+
+      var day = currentDate.getDate();
+      var month = currentDate.getMonth() + 1; 
+      var year = currentDate.getFullYear();
+      day = (day < 10) ? '0' + day : day;
+      month = (month < 10) ? '0' + month : month;
+
+
+      
+      var formattedDate;
+      if (selectedFormat === "mm-dd-yyyy") {
+        formattedDate = month + "-" + day + "-" + year;
+      } else if (selectedFormat === "mm/dd/yyyy") {
+        formattedDate = month + "/" + day + "/" + year;
+      } else if (selectedFormat === "dd-mm-yyyy") {
+        formattedDate = day + "-" + month + "-" + year;
+      } else if (selectedFormat === "dd/mm/yyyy") {
+        formattedDate = day + "/" + month + "/" + year;
+      }
+
+      
+      document.getElementById("currentDate").innerText = formattedDate;
+    }
+  </script>
+
+</body>
+</html>

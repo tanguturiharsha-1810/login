@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words</title>
+   
+</head>
+<body>
+
+    <h2>Number to Words</h2>
+
+    <label for="numberInput">Enter a number (0-999):</label>
+    <input type="text" id="numberInput" maxlength="3" pattern="\d*" oninput="validateInput()">
+
+    <button onclick="convertToWords()">Convert</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validateInput() {
+            const inputField = document.getElementById('numberInput');
+            inputField.value = inputField.value.replace(/[^0-9]/g, ''); 
+            if (inputField.value > 999) {
+                inputField.value = '999';
+            }
+        }
+
+        function convertToWords() {
+            const inputNumber = document.getElementById('numberInput').value;
+            const resultParagraph = document.getElementById('result');
+
+            if (isNaN(inputNumber)) {
+                resultParagraph.textContent = 'Please enter a valid number.';
+            } else if (inputNumber < 0 || inputNumber > 999) {
+                resultParagraph.textContent = 'Number must be between 0 and 999.';
+            } else {
+                const words = numberToWords(inputNumber);
+                resultParagraph.textContent = `In words: ${words}`;
+            }
+        }
+
+        function numberToWords(number) {
+            const units = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+            const teens = ['', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+            const tens = ['', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+            let words = '';
+
+            if (number >= 100) {
+                words += units[Math.floor(number / 100)] + ' Hundred ';
+                number %= 100;
+            }
+
+            if (number > 10 && number < 20) {
+                words += teens[number - 10] + ' ';
+            } else {
+                words += tens[Math.floor(number / 10)] + ' ';
+                number %= 10;
+                words += units[number] + ' ';
+            }
+
+            return words.trim();
+        }
+    </script>
+
+</body>
+</html>
