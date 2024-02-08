@@ -115,4 +115,36 @@ body{
 .Resume-link p a:hover{
     text-decoration: underline;
 }
+.calculator-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.calculator-link p a:hover{
+    text-decoration: underline;
+}
+.Date-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.Date-link p a:hover{
+    text-decoration: underline;
+}
+.multiple-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.multiple-link p a:hover{
+    text-decoration: underline;
+}
+.Numbertext-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.Numbertext-linkp a:hover{
+    text-decoration: underline;
+}
 
